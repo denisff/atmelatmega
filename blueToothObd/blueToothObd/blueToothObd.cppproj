@@ -28,15 +28,15 @@
     <BootSegment>0</BootSegment>
     <AsfFrameworkConfig>
       <framework-data xmlns="">
-  <options />
-  <configurations />
-  <files />
-  <documentation help="" />
-  <offline-documentation help="" />
-  <dependencies>
-    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.19.0" />
-  </dependencies>
-</framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.19.0" />
+        </dependencies>
+      </framework-data>
     </AsfFrameworkConfig>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -177,13 +177,13 @@ build.arch=AVR
 vm.runtime.compiler.showwarnings=false
 compiler.path=C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\
 includes= -I"C:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino"  -I"C:\Program Files (x86)\Arduino\hardware\arduino\variants\standard"  -I"C:\Program Files (x86)\Arduino\libraries\SoftwareSerial"  -I"C:\Program Files (x86)\Arduino\libraries"  -I"C:\Program Files (x86)\Arduino\hardware\arduino\libraries"  -I"C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers"  -I"C:\Users\osc\Documents\Arduino\libraries" 
-build.path=C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\bluetooth_obd_interface\atmega328
-build.project_name=bluetooth_obd_interface
+build.path=C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\blueToothObd\atmega328
+build.project_name=blueToothObd
 build.variant.path=C:\Program Files (x86)\Arduino\hardware\arduino\variants\standard
 archive_file=core.a
-object_file=C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\bluetooth_obd_interface\atmega328\SoftwareSerial\SoftwareSerial.cpp.o
+object_file=C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\blueToothObd\atmega328\SoftwareSerial\SoftwareSerial.cpp.o
 source_file=C:\Program Files (x86)\Arduino\libraries\SoftwareSerial\SoftwareSerial.cpp
-object_files="C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\bluetooth_obd_interface\atmega328\bluetooth_obd_interface.cpp.o" "C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\bluetooth_obd_interface\atmega328\SoftwareSerial\SoftwareSerial.cpp.o" 
+object_files="C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\bluetooth_master\atmega328\bluetooth_master.cpp.o" "C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\bluetooth_master\atmega328\SoftwareSerial\SoftwareSerial.cpp.o" 
 build.architecture=avr
 vmresolved.compiler.path=C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\
 vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
@@ -338,13 +338,13 @@ build.arch=AVR
 vm.runtime.compiler.showwarnings=false
 compiler.path=C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\
 includes= -I"C:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino"  -I"C:\Program Files (x86)\Arduino\hardware\arduino\variants\standard"  -I"C:\Program Files (x86)\Arduino\libraries\SoftwareSerial"  -I"C:\Program Files (x86)\Arduino\libraries"  -I"C:\Program Files (x86)\Arduino\hardware\arduino\libraries"  -I"C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers"  -I"C:\Users\osc\Documents\Arduino\libraries" 
-build.path=C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\bluetooth_obd_interface\atmega328
-build.project_name=bluetooth_obd_interface
+build.path=C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\blueToothObd\atmega328
+build.project_name=blueToothObd
 build.variant.path=C:\Program Files (x86)\Arduino\hardware\arduino\variants\standard
 archive_file=core.a
-object_file=C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\bluetooth_obd_interface\atmega328\SoftwareSerial\SoftwareSerial.cpp.o
+object_file=C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\blueToothObd\atmega328\SoftwareSerial\SoftwareSerial.cpp.o
 source_file=C:\Program Files (x86)\Arduino\libraries\SoftwareSerial\SoftwareSerial.cpp
-object_files="C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\bluetooth_obd_interface\atmega328\bluetooth_obd_interface.cpp.o" "C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\bluetooth_obd_interface\atmega328\SoftwareSerial\SoftwareSerial.cpp.o" 
+object_files="C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\bluetooth_master\atmega328\bluetooth_master.cpp.o" "C:\Users\osc\AppData\Local\VMicro\Arduino\Builds\bluetooth_master\atmega328\SoftwareSerial\SoftwareSerial.cpp.o" 
 build.architecture=avr
 vmresolved.compiler.path=C:\Program Files (x86)\Arduino\hardware\tools\avr\bin\
 vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr

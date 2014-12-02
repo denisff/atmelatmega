@@ -35,7 +35,7 @@ OK*/
 #define idle 0
 #define setMask 1
 #define wait 2
-#define read 3
+#define getresponse 3
 #define show 4
 int state= 0;
 boolean  bt_error_flag=false;
@@ -88,7 +88,7 @@ void loop()
 
 delay(5000);
 switch(state) {
-	case idle: if (blueToothSerial.available()>0) state=read; else break;
+	case idle: if (blueToothSerial.available()>0) state=getresponse; else break;
 	
 	 default : state=idle; break;
 }
