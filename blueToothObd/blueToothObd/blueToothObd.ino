@@ -85,11 +85,13 @@ void waitForResponse() {
 
 void loop()
 {
-
+int i=0;
 delay(5000);
 switch(state) {
 	case idle: if (blueToothSerial.available()>0) state=getresponse; else break;
-	
+	case getresponse: if (blueToothSerial.read()='>') {
+		
+	}
 	 default : state=idle; break;
 }
 blueToothSerial.write("atcra412\r");
