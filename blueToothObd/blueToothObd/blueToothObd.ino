@@ -32,11 +32,12 @@ OK*/
 #define PIO11 7             //Arduino pin connected to PI011 of HC-05 (enter AT Mode with HIGH)
 // Swap RX/TX connections on bluetooth chip
 
-#define idle 0
-#define setMask 1
-#define wait 2
-#define getresponse 3
-#define show 4
+#define idle 1
+#define Sendcommand 0
+#define setMask 2
+#define wait 3
+#define getresponse 4
+#define show 5
 int state= 0;
 boolean  bt_error_flag=false;
 void sendATCommand(String command);
@@ -48,6 +49,8 @@ SoftwareSerial blueToothSerial(Rx, Tx); // RX, TX
 void setupOBD2();
 //#define mac "1014,05,220194"
 #define mac "000D, 18, 3A6789" //"1014,05,220194" 0004,3E,315B53 "0D,18,3A6789" A4DB,30,F0DFCD
+char buffer[70];
+
 void setup()
 {
 
@@ -88,10 +91,19 @@ void loop()
 int i=0;
 delay(5000);
 switch(state) {
+	case Sendcommand : blueToothSerial.write("atcra412\r");
+					waitForResponse();	
+					blueToothSerial.write("atma\r"); 
+					state=idle;break;
+					
 	case idle: if (blueToothSerial.available()>0) state=getresponse; else break;
-	case getresponse: if (blueToothSerial.read()='>') {
-		
-	}
+	case getresponse: if (blueToothSerial.read()=='>') {
+						while (blueToothSerial.available()) {
+							buffer[i]=(blueToothSerial.read());
+							i++;
+						}
+	
+							}
 	 default : state=idle; break;
 }
 blueToothSerial.write("atcra412\r");
