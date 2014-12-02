@@ -98,21 +98,19 @@ switch(state) {
 					
 	case idle: if (blueToothSerial.available()>0) state=getresponse; else break;
 	case getresponse: if (blueToothSerial.read()=='>') {
-						while (blueToothSerial.available()) {
+						while (blueToothSerial.available()>0) {
 							buffer[i]=(blueToothSerial.read());
 							i++;
 						}
-	
-							}
+							blueToothSerial.write("atb\r");
+							waitForResponse();
+							state=show; break;
+							} break;
 	 default : state=idle; break;
 }
-blueToothSerial.write("atcra412\r");
-waitForResponse();
 
-blueToothSerial.write("atma\r");
-waitForResponse();
-blueToothSerial.write("atb\r");
-waitForResponse();
+
+
 }
 
 void setupOBD2(){
