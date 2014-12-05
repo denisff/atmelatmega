@@ -28,16 +28,17 @@
     <BootSegment>0</BootSegment>
     <AsfFrameworkConfig>
       <framework-data xmlns="">
-  <options />
-  <configurations />
-  <files />
-  <documentation help="" />
-  <offline-documentation help="" />
-  <dependencies>
-    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.17.0" />
-  </dependencies>
-</framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.17.0" />
+        </dependencies>
+      </framework-data>
     </AsfFrameworkConfig>
+    <preserveEEPROM>true</preserveEEPROM>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -188,6 +189,10 @@ build.variant.path=C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\varia
 archive_file=core.a
 object_file=C:\Users\osch\AppData\Local\VMicro\Arduino\Builds\bluetoothOBD\atmega328\avr\SoftwareSerial.cpp.o
 source_file=C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\arch\avr\SoftwareSerial.cpp
+object_files="C:\Users\osch\AppData\Local\VMicro\Arduino\Builds\bluetoothOBD\atmega328\bluetoothOBD.cpp.o" "C:\Users\osch\AppData\Local\VMicro\Arduino\Builds\bluetoothOBD\atmega328\avr\SoftwareSerial.cpp.o" 
+build.architecture=avr
+vmresolved.compiler.path=C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\bin\
+vmresolved.tools.path=C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr
 </arduino.board.property_bag>
         <arduino.build.mcu>atmega328p</arduino.build.mcu>
         <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
@@ -350,6 +355,10 @@ build.variant.path=C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\varia
 archive_file=core.a
 object_file=C:\Users\osch\AppData\Local\VMicro\Arduino\Builds\bluetoothOBD\atmega328\avr\SoftwareSerial.cpp.o
 source_file=C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\arch\avr\SoftwareSerial.cpp
+object_files="C:\Users\osch\AppData\Local\VMicro\Arduino\Builds\bluetoothOBD\atmega328\bluetoothOBD.cpp.o" "C:\Users\osch\AppData\Local\VMicro\Arduino\Builds\bluetoothOBD\atmega328\avr\SoftwareSerial.cpp.o" 
+build.architecture=avr
+vmresolved.compiler.path=C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\bin\
+vmresolved.tools.path=C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr
 </arduino.board.property_bag>
         <arduino.build.mcu>atmega328p</arduino.build.mcu>
         <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
