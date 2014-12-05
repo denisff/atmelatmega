@@ -19,6 +19,7 @@ extern "C" void __cxa_pure_virtual() {;}
 
 //
 void waitForResponse();
+char* readResponse();
 //
 void setupOBD2();
 void setupBlueToothConnection();

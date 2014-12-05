@@ -25,6 +25,7 @@ OK*/
     AT+BAUDA-----460800
     AT+BAUDB-----921600
     AT+BAUDC----1382400 */
+#include "Arduino.h"
 #include <SoftwareSerial.h>
 #define Rx 5                //Arduino pin connected to Tx of HC-05
 #define Tx 6               //Arduino pin connected to Rx of HC-05
@@ -32,12 +33,11 @@ OK*/
 #define PIO11 7             //Arduino pin connected to PI011 of HC-05 (enter AT Mode with HIGH)
 // Swap RX/TX connections on bluetooth chip
 
-#define idle 1
 #define Sendcommand 0
-#define setMask 2
-#define wait 3
-#define getresponse 4
-#define show 5
+#define setMask 1
+#define getresponse 2
+#define show 3
+#define extract1 4
 int state= 0;
 boolean  bt_error_flag=false;
 void sendATCommand(String command);
@@ -45,12 +45,20 @@ void enterATMode();
 void resetBT();
 void enterComMode();
 void setupBlueToothConnection();
+char* readResponse();
 SoftwareSerial blueToothSerial(Rx, Tx); // RX, TX
+
 void setupOBD2();
 //#define mac "1014,05,220194"
 #define mac "000D, 18, 3A6789" //"1014,05,220194" 0004,3E,315B53 "0D,18,3A6789" A4DB,30,F0DFCD
-char buffer[70];
 
+volatile char* R;
+
+char response[50];
+String speed;
+String odo;
+
+int i=0;
 void setup()
 {
 
@@ -63,8 +71,7 @@ pinMode(Rx, INPUT);
    digitalWrite(Reset, HIGH);   //HC-05 no Reset
 
  blueToothSerial.begin(38400);
- 
-  Serial.begin(38400);
+  Serial.begin(115200);
 while (!Serial) {
 	; // wait for serial port to connect. Needed for Leonardo only
 }
@@ -75,45 +82,93 @@ setupOBD2();
 }
 
 void waitForResponse() {
-	//while (!blueToothSerial.available());
-	delay(5000);
+	delay(1009);
+//while (!blueToothSerial.available());
+	delay(100);
 	while (blueToothSerial.available()) {
 		Serial.write(blueToothSerial.read());
+		
+	//int c=blueToothSerial.read();
 	}
 	Serial.write("\n");
 
 
-	delay(100);
+	delay(1000);
 }
 
+char* readResponse() {
+	delay(1009);
+	static char buffer[70];
+	//while (!blueToothSerial.available());
+	delay(100);
+	while (blueToothSerial.available()) {
+		buffer[i]=blueToothSerial.read();
+		i++;
+		
+		delay(100);
+		//int c=blueToothSerial.read();
+	}
+	
+   for(int i=0; i<20; i++){
+	   
+	Serial.write(buffer[i]);
+   }
+   
+
+	delay(100);
+	return buffer;
+}
 void loop()
 {
 
-
 switch(state) {
-	case Sendcommand :		delay(5000);
-							blueToothSerial.flush();
+	case Sendcommand :		
 							blueToothSerial.write("atcra412\r");
 							waitForResponse();	
 							blueToothSerial.write("atma\r"); 
-							state=idle;break;
-					
-	case idle: if (blueToothSerial.available()>0) state=getresponse; else break;
-	case getresponse: if (blueToothSerial.read()=='>') {
-						while (blueToothSerial.available()>0) {
-							for (int i=0 ; i<19;i++)
-							buffer[i]=(blueToothSerial.read());
-							
-						}
-							blueToothSerial.flush();
-							blueToothSerial.write("atb\r");
+							while (!(blueToothSerial.available()));
+							while (blueToothSerial.available()) {
+								response[i]=blueToothSerial.read();
+								i++;
+								
+								
+								 
+								//int c=blueToothSerial.read();
+							}
+							blueToothSerial.write("atb\r"); 
 							waitForResponse();
-							state=show; break;
-	case show:				for(int i=0; i<19, i++;) Serial.print(buffer[i]);
-							Serial.println();
-							state=Sendcommand; break;
-							} break;
-	 default : state=idle; break;
+							waitForResponse();
+							waitForResponse();
+							state=show;
+							break;
+
+					
+		
+	case getresponse:  		delay(1000);while(blueToothSerial.available()) int b=blueToothSerial.read(); 
+							
+							Serial.println(state);
+						state=show; break;  
+
+	case show:				
+							//if(!(blueToothSerial.available())>0) {
+							for(int i=0; i<19, i++;) {
+								Serial.write(response[i]);
+								//response =*R++;
+								}
+							Serial.print(response);
+							Serial.println(state); 
+							blueToothSerial.flush();
+							state=Sendcommand;break;
+						  	
+							
+/*						
+case extract1: 				speed=response.substring(3,6);
+								Serial.println(speed);
+								odo =response.substring(7,12);
+								Serial.println(odo);
+								state=Sendcommand; break;  
+								*/
+	 default : state=Sendcommand; break;
 }
 
 
@@ -162,6 +217,7 @@ void setupBlueToothConnection()
   sendATCommand("STATE?");
   sendATCommand("LINK=000D,18,3A6789");    //send LINK, link with OBD address 1234,
  Serial.println("link");
+ delay(2000); 
   sendATCommand("STATE?");
   enterComMode();                          //enter HC-05 communication mode
 
