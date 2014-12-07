@@ -54,7 +54,8 @@ void setupOBD2();
 
 volatile char* R;
 
-char response[50];
+char response[20];
+int n=0;
 String speed;
 String odo;
 
@@ -128,17 +129,20 @@ switch(state) {
 							blueToothSerial.write("atma\r"); 
 							while (!(blueToothSerial.available()));
 							if (blueToothSerial.available()>19) {
-								response[i]=blueToothSerial.read();
-								i++;
+								
+						n=blueToothSerial.readBytesUntil('\r',response,sizeof(response));		
+								if (n==19) {
 								
 								
 								 
 								//int c=blueToothSerial.read();
-							}
+						
 							blueToothSerial.write("atb\r"); 
 							waitForResponse();
 							waitForResponse();
-							waitForResponse();
+							waitForResponse();   
+								}
+							}
 							state=show;
 							break;
 
