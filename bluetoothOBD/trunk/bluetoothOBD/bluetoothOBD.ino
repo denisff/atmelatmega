@@ -127,7 +127,7 @@ switch(state) {
 							waitForResponse();	
 							blueToothSerial.write("atma\r"); 
 							while (!(blueToothSerial.available()));
-							while (blueToothSerial.available()) {
+							if (blueToothSerial.available()>19) {
 								response[i]=blueToothSerial.read();
 								i++;
 								
