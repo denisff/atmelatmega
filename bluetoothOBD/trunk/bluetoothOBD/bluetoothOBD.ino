@@ -57,10 +57,15 @@ volatile char* R;
 
 static char response[20];
 int n=0;
-String speed;
-String odo;
+char speed[3];
+char odo[7];
+char d3[3];
+char d4[3];
+char d5[3];
 int flag=1;
 int i=0;
+volatile char hastighed=0;
+unsigned int km;
 void setup()
 {
 
@@ -173,20 +178,45 @@ switch(state) {
 								Serial.print(response[k]);
 								//response =*R++;
 							}
-							Serial.print(response);
+							
 							flag=1;
 							Serial.println(state); 
 							//blueToothSerial.flush();
-							state=Sendcommand;break;
+							state=extract1;break;
 						  	
 							
-/*						
-case extract1: 				speed=response.substring(3,6);
+					
+case extract1: 				
+								for (int i=5; i<7; i++)
+									{
+									speed[i-5]=response[i];
+								}
+
 								Serial.println(speed);
-								odo =response.substring(7,12);
-								Serial.println(odo);
+								
+								
+								for (int i=11; i<13; i++)
+								{
+									d5[i-11]=response[i];
+								}
+								for (int i=9; i<11; i++)
+								{
+									d4[i-9]=response[i];
+								}
+								for (int i=7; i<9; i++)
+								{
+									d3[i-7]=response[i];
+								}
+								
+								Serial.println(d3);
+								Serial.println(d4);
+								Serial.println(d5);
+								sscanf(speed,"%2X",&hastighed);
+								sscanf(d4,"%2X",&km);
+								Serial.println(hastighed,DEC);
+								Serial.println(km,DEC);
 								state=Sendcommand; break;  
-								*/
+								
 	 default : state=Sendcommand; break;
 }
 
