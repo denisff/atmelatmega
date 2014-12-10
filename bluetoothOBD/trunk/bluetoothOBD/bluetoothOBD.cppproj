@@ -62,18 +62,20 @@
         </avrgcc.compiler.symbols.DefSymbols>
         <avrgcc.compiler.directories.IncludePaths>
           <ListValues>
-            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\variants\standard</Value>
-            <Value>C:\Program Files (x86)\Arduino\libraries\SoftwareSerial</Value>
-            <Value>C:\Program Files (x86)\Arduino\libraries\SoftwareSerial\utility</Value>
-            <Value>C:\Program Files (x86)\Arduino\libraries</Value>
-            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\libraries</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\cores\arduino</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\variants\standard</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\src</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\src\utility</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\arch\avr</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\arch\avr\utility</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\libraries</Value>
             <Value>C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers</Value>
-            <Value>C:\Users\osc\Documents\Arduino\libraries</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>C:\Users\osch\Documents\Arduino\libraries</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\avr\</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
           </ListValues>
         </avrgcc.compiler.directories.IncludePaths>
         <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -97,18 +99,20 @@
         </avrgcccpp.compiler.symbols.DefSymbols>
         <avrgcccpp.compiler.directories.IncludePaths>
           <ListValues>
-            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\variants\standard</Value>
-            <Value>C:\Program Files (x86)\Arduino\libraries\SoftwareSerial</Value>
-            <Value>C:\Program Files (x86)\Arduino\libraries\SoftwareSerial\utility</Value>
-            <Value>C:\Program Files (x86)\Arduino\libraries</Value>
-            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\libraries</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\cores\arduino</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\variants\standard</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\src</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\src\utility</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\arch\avr</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\arch\avr\utility</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\libraries</Value>
             <Value>C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers</Value>
-            <Value>C:\Users\osc\Documents\Arduino\libraries</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>C:\Users\osch\Documents\Arduino\libraries</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\avr\</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
             <Value>
             </Value>
           </ListValues>
@@ -224,18 +228,20 @@ vmresolved.tools.path=C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr
         </avrgcc.compiler.symbols.DefSymbols>
         <avrgcc.compiler.directories.IncludePaths>
           <ListValues>
-            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\variants\standard</Value>
-            <Value>C:\Program Files (x86)\Arduino\libraries\SoftwareSerial</Value>
-            <Value>C:\Program Files (x86)\Arduino\libraries\SoftwareSerial\utility</Value>
-            <Value>C:\Program Files (x86)\Arduino\libraries</Value>
-            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\libraries</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\cores\arduino</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\variants\standard</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\src</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\src\utility</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\arch\avr</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\arch\avr\utility</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\libraries</Value>
             <Value>C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers</Value>
-            <Value>C:\Users\osc\Documents\Arduino\libraries</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>C:\Users\osch\Documents\Arduino\libraries</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\avr\</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
           </ListValues>
         </avrgcc.compiler.directories.IncludePaths>
         <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -259,18 +265,20 @@ vmresolved.tools.path=C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr
         </avrgcccpp.compiler.symbols.DefSymbols>
         <avrgcccpp.compiler.directories.IncludePaths>
           <ListValues>
-            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\variants\standard</Value>
-            <Value>C:\Program Files (x86)\Arduino\libraries\SoftwareSerial</Value>
-            <Value>C:\Program Files (x86)\Arduino\libraries\SoftwareSerial\utility</Value>
-            <Value>C:\Program Files (x86)\Arduino\libraries</Value>
-            <Value>C:\Program Files (x86)\Arduino\hardware\arduino\libraries</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\cores\arduino</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\variants\standard</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\src</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\src\utility</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\arch\avr</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries\SoftwareSerial\arch\avr\utility</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\libraries</Value>
+            <Value>C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\libraries</Value>
             <Value>C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers</Value>
-            <Value>C:\Users\osc\Documents\Arduino\libraries</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\avr\</Value>
-            <Value>c:\program files (x86)\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>C:\Users\osch\Documents\Arduino\libraries</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\avr\</Value>
+            <Value>c:\arduino-1.0.3-windows\arduino-1.0.3\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
             <Value>
             </Value>
           </ListValues>

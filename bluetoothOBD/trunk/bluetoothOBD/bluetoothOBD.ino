@@ -27,6 +27,7 @@ OK*/
     AT+BAUDC----1382400 */
 #include "Arduino.h"
 #include <SoftwareSerial.h>
+#include <avr/io.h>
 #define Rx 5                //Arduino pin connected to Tx of HC-05
 #define Tx 6               //Arduino pin connected to Rx of HC-05
 #define Reset 9              //Arduino pin connected to Reset of HC-05 (reset with LOW)
@@ -38,7 +39,7 @@ OK*/
 #define getresponse 2
 #define show 3
 #define extract1 4
-int state= 0;
+ int state= 0;
 boolean  bt_error_flag=false;
 void sendATCommand(String command);
 void enterATMode();
@@ -54,11 +55,11 @@ void setupOBD2();
 
 volatile char* R;
 
-char response[20];
+static char response[20];
 int n=0;
 String speed;
 String odo;
-
+int flag=1;
 int i=0;
 void setup()
 {
@@ -87,9 +88,9 @@ void waitForResponse() {
 //while (!blueToothSerial.available());
 	delay(100);
 	while (blueToothSerial.available()) {
-		Serial.write(blueToothSerial.read());
+	//	Serial.write(blueToothSerial.read());
 		
-	//int c=blueToothSerial.read();
+	int c=blueToothSerial.read();
 	}
 	Serial.write("\n");
 
@@ -127,41 +128,55 @@ switch(state) {
 							blueToothSerial.write("atcra412\r");
 							waitForResponse();	
 							blueToothSerial.write("atma\r"); 
+							
+							
 							while (!(blueToothSerial.available()));
-							if (blueToothSerial.available()>19) {
-								
-						n=blueToothSerial.readBytesUntil('\r',response,sizeof(response));		
-								if (n==19) {
-								
-								
-								 
-								//int c=blueToothSerial.read();
-						
-							blueToothSerial.write("atb\r"); 
-							waitForResponse();
-							waitForResponse();
-							waitForResponse();   
-								}
-							}
-							state=show;
+							state =getresponse;
 							break;
+							
+							
+							
 
 					
 		
-	case getresponse:  		delay(1000);while(blueToothSerial.available()) int b=blueToothSerial.read(); 
-							
+	case getresponse:  		delay(100);//if(blueToothSerial.read()=='\r') {
 							Serial.println(state);
-						state=show; break;  
+		                         while (blueToothSerial.available()) {
+			                       if(i<19){
+			                         response[i]=blueToothSerial.read();
+								//	 Serial.print(response[i]);
+		                         i++;}
+		                         if(i==19) {  state=show;
+		                        
+		                         Serial.println();
+		                         //n=blueToothSerial.readBytesUntil('\r',response,sizeof(response));
+		                         blueToothSerial.write("atb\r");
+		                         waitForResponse();
+		                         waitForResponse();
+		                         waitForResponse();
+		                        
+		                         
+		                         
+		                         //int c=blueToothSerial.read();
+		                         break;}
+						} 
+		                         
+	                        	//}
+	                         
+							
+							
+						break;  
 
-	case show:				
+	case show:				i=0;
 							//if(!(blueToothSerial.available())>0) {
-							for(int i=0; i<19, i++;) {
-								Serial.write(response[i]);
+							for(int k=0; k<19; k++) {
+								Serial.print(response[k]);
 								//response =*R++;
-								}
+							}
 							Serial.print(response);
+							flag=1;
 							Serial.println(state); 
-							blueToothSerial.flush();
+							//blueToothSerial.flush();
 							state=Sendcommand;break;
 						  	
 							
