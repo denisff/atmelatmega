@@ -28,6 +28,6 @@ void enterComMode();
 void enterATMode();
 void sendATCommand(String command);
 
-#include "C:\Program Files (x86)\Arduino\hardware\arduino\variants\standard\pins_arduino.h" 
-#include "C:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino\arduino.h"
-#include "C:\Users\osc\Documents\Atmel Studio\6.2\bluetoothOBD(3)\bluetoothOBD\bluetoothOBD.ino"
+#include "C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\variants\standard\pins_arduino.h" 
+#include "C:\arduino-1.0.3-windows\arduino-1.0.3\hardware\arduino\cores\arduino\arduino.h"
+#include "C:\Users\osch\Documents\Atmel Studio\6.2\bluetoothOBD\bluetoothOBD\bluetoothOBD.ino"
