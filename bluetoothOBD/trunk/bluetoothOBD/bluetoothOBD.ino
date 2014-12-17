@@ -91,7 +91,7 @@ setupOBD2();
 void waitForResponse() {
 	delay(1009);
 //while (!blueToothSerial.available());
-	delay(100);
+	
 	while (blueToothSerial.available()) {
 	//	Serial.write(blueToothSerial.read());
 		
@@ -100,7 +100,7 @@ void waitForResponse() {
 	Serial.write("\n");
 
 
-	delay(1000);
+	
 }
 
 char* readResponse() {
@@ -195,24 +195,12 @@ case extract1:
 								Serial.println(speed);
 								
 								
-								for (int i=11; i<13; i++)
+								for (int i=7; i<13; i++)
 								{
-									d5[i-11]=response[i];
+									odo[i-7]=response[i];
 								}
-								for (int i=9; i<11; i++)
-								{
-									d4[i-9]=response[i];
-								}
-								for (int i=7; i<9; i++)
-								{
-									d3[i-7]=response[i];
-								}
-								
-								Serial.println(d3);
-								Serial.println(d4);
-								Serial.println(d5);
-								sscanf(speed,"%2X",&hastighed);
-								sscanf(d4,"%2X",&km);
+								sscanf(speed,"%X",&hastighed);
+								sscanf(odo,"%X",&km);
 								Serial.println(hastighed,DEC);
 								Serial.println(km,DEC);
 								state=Sendcommand; break;  
@@ -220,7 +208,10 @@ case extract1:
 	 default : state=Sendcommand; break;
 }
 
-
+/*
+sscanf (odo,"%X", &pid);         //convert the hex to an integer
+sprintf(pid_retur,"%d",pid);   //check it was converted correctly
+*/
 
 }
 
